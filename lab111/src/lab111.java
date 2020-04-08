@@ -2,23 +2,27 @@ import java.io.IOError;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class lab111
+public class lab1
 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
         int from = 0;
         int to = 0;
 
+        System.out.println("Enter a range of numbers:");
 
         try {
-            from = sc.nextInt();
-            to = sc.nextInt();
-        } catch (IOError e)
+             System.out.print("from: ");
+             from = sc.nextInt();
+             System.out.print("to: ");
+             to = sc.nextInt();
+        } catch (Exception e)
         {
-            System.out.println(e.getMessage());
+            System.out.println("illegal character!!!");
         }
-
+        
         if(from < to)
         {
             for (int i = from; i < to; i++)
